@@ -25,6 +25,17 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Login</button>
                     </form>
+
+                    <!-- Links: Register and Forgot Password -->
+                    <div class="mt-4 text-center">
+                        <p class="mb-2">
+                            Don't have an account? 
+                            <a href="{{ route('register.form') }}" class="text-primary">Register here</a>
+                        </p>
+                        <p>
+                            <a href="{{ route('password.request') }}" class="text-muted small">Forgot your password?</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

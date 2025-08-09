@@ -22,6 +22,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/profiles', [ProfileController::class, 'index'])->name('profiles.index');
 });
 
+//  Placeholder for password reset
+Route::get('/forgot-password', function () {
+    return view('auth.forgot-password');
+})->name('password.request');
+
+Route::post('/forgot-password', function (\Illuminate\Http\Request $request) {
+    // Implement password reset logic (send reset link)
+    return back()->with('status', 'Password reset email sent! (Simulated)');
+})->name('password.email');
 // Logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
